@@ -1,17 +1,13 @@
 ﻿// c++ szkola.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
-//
+//NIE JEST MONDRZE BO VISUAL SSIE ;C
 
-#include "pch.h"
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
 #include <string>
-#include <math.h>
 #include <cmath>
 #include <array>
-#include <time.h>
 #include <fstream>
-#include <vector>
 #include <random>
 
 float random_dev() {
@@ -26,16 +22,16 @@ int main()
 {
 	int n{}, m{};
 	float re{};
-	std::string plikA{};
+	std::string plik_zmienne{}, plik_A{};
 	std::fstream los{};
 
 	//    std::cout << "Wprowadz nazwe pliku: " << std::endl;
 
 	std::cout << "Podaj sciezke pliku z ktorego ma zostac pobrana ilosc wierszy i kolumn do macierzy" << std::endl;
 
-	std::cin >> plikA;
+	std::cin >> plik_zmienne;
 
-	los.open(plikA, std::ios::in);
+	los.open(plik_zmienne, std::ios::in);
 	if (los.good())
 	{
 		while (!los.eof())
@@ -48,9 +44,9 @@ int main()
 
 	std::cout << "Podaj nazwe pliku w ktorym beda wyniki" << std::endl;
 
-	std::cin >> plikA;
+	std::cin >> plik_A;
 
-	los.open(plikA, std::ios::out);
+	los.open(plik_A, std::ios::out);
 
 	los << "n= " << n << " m= " << m << '\n';
 
@@ -80,3 +76,4 @@ int main()
 //   4. Użyj okna Lista błędów, aby zobaczyć błędy
 //   5. Wybierz pozycję Projekt > Dodaj nowy element, aby utworzyć nowe pliki kodu, lub wybierz pozycję Projekt > Dodaj istniejący element, aby dodać istniejące pliku kodu do projektu
 //   6. Aby w przyszłości ponownie otworzyć ten projekt, przejdź do pozycji Plik > Otwórz > Projekt i wybierz plik sln
+//OMG CZEMU
