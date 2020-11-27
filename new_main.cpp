@@ -51,17 +51,17 @@ int main()
 
 	los << "n= " << n << " m= " << m << '\n';
 
-	    for (int i = 1; i <= n; ++i) {
-			for (int j = 1; j <= m ; ++j) {
-			   re = random_dev();
-			   los.width(6);
-//			   los.precision(2);
-			   los << re << std::setprecision(2);// << std::endl;
-			   if (j != m) los << " ";
-			}
-			los << '\n';
+	for (int i = 1; i <= n; ++i) {
+		for (int j = 1; j <= m; ++j) {
+			re = random_dev();
+			los.width(6);
+			los.precision(1);
+			los << std::fixed << re;
+			if (j != m) los << " ";
 		}
-	
+		los << '\n';
+	}
+
 
 	return 0;
 
